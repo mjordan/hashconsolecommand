@@ -52,16 +52,15 @@
     },
     "scripts": {
         "auto-scripts": {
+            "@composer require symfony/dotenv",
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
-            "@auto-scripts",
-            "@composer require symfony/dotenv"
+            "@auto-scripts"
         ],
         "post-update-cmd": [
-            "@auto-scripts",
-            "@composer require symfony/dotenv"
+            "@auto-scripts"
         ]
     },
     "conflict": {
