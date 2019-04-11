@@ -53,16 +53,16 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "composer require symfony/dotenv"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
-            "@auto-scripts"
+            "@auto-scripts",
+            "@composer require symfony/dotenv"
         ],
         "post-update-cmd": [
-            "@auto-scripts"
-        ],
-        "check": "vendor/bin/phpcs --standard=PSR2 src tests"
+            "@auto-scripts",
+            "@composer require symfony/dotenv"
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
